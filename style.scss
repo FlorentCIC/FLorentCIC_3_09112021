@@ -26,7 +26,7 @@ $breakpoint: 1000px;
     box-shadow: 2px 1px 8px -3px $lightgrey;
 }
 
-@mixin transform-zoom($zoom-level: 1.02, $transformation: null) {
+@mixin transform-zoom($zoom-level: 1.02, $transformation: none) {
     transform: $transformation scale($zoom-level);
   }
 
