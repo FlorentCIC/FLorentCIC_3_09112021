@@ -383,14 +383,23 @@ body {
     }
   }
 
-.banner img {
+  .banner img {
     display: block;
     width: 100%;
     height: 70vh;
     object-fit: cover;
     object-position: center;
+  
   }
- 
+
+  @media (max-width: 426px){
+  .banner img {
+    display: block;
+    height: 35vh;
+    object-fit: cover;
+   }
+  }
+
 .resto__title {
     margin-top: -2rem;
     h2 {

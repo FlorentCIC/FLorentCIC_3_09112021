@@ -345,6 +345,13 @@ body {
   object-fit: cover;
   object-position: center;
 }
+@media (max-width: 426px) {
+  #page-resto .banner img {
+    display: block;
+    height: 35vh;
+    object-fit: cover;
+  }
+}
 #page-resto .resto__title {
   margin-top: -2rem;
 }
