@@ -27,11 +27,11 @@ body {
 }
 
 main {
-  padding: 0 7rem;
+  padding: 0rem;
 }
 @media (max-width: 1000px) {
   main {
-    padding: 0 1rem;
+    padding: 0rem;
   }
 }
 
@@ -81,15 +81,20 @@ header {
 
 /*EXPLORER*/
 .explorer {
+  background-color: red;
+  height: 45vh;
   text-align: center;
-  margin: 2rem;
+  margin-top: -16px;
+  margin-bottom: 5rem;
 }
 .explorer h2 {
   font-size: 1.5rem;
   margin: 1rem;
+  padding-top: 35px;
 }
 .explorer p {
   font-size: 1rem;
+  margin: 0 1rem;
 }
 .explorer button {
   color: white;
@@ -104,6 +109,7 @@ header {
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   font-size: 1rem;
+  margin-top: 2rem;
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -145,8 +151,12 @@ header {
 }
 /*TUTO*/
 .tuto {
+  background-color: #9356dc;
+  height: 66vh;
+  margin-top: -80px;
   counter-reset: steps;
   margin-bottom: 2rem;
+  margin-left: -14px;
 }
 .tuto ol {
   display: flex;
@@ -155,6 +165,16 @@ header {
 @media (max-width: 1000px) {
   .tuto ol {
     flex-direction: column;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 1001px) {
+  .tuto ol {
+    padding-top: 80px;
+  }
+  .tuto ol li {
+    padding: 2.5rem 2rem;
+    margin-right: 18px;
   }
 }
 .tuto li {
@@ -196,15 +216,29 @@ header {
   font-size: 1.5rem;
 }
 
+.h2fonction {
+  padding-top: 35px;
+  margin-left: 32px;
+  margin-bottom: 26px;
+}
+
+@media (min-width: 1001px) {
+  .h2fonction {
+    margin-left: auto;
+    margin-right: auto;
+    width: 9rem;
+  }
+}
 /*MENU*/
 #homepage .menus {
   background-color: #f6f6f6;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 #homepage .menus .menus__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  margin: 0 1rem;
 }
 @media (max-width: 1000px) {
   #homepage .menus .menus__cards {
@@ -297,6 +331,11 @@ header {
 #homepage .menus .card__description h3,
 #homepage .menus .card__description p {
   padding: 0.3rem;
+}
+
+.h2resto {
+  margin-left: 18px;
+  margin-bottom: 18px;
 }
 
 /*FOOTER*/

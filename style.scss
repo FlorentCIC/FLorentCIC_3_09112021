@@ -65,20 +65,20 @@ $breakpoint: 1000px;
       @include heart;
     }
     &::after {
-        @include heart($opacity: 0, $font-weight: 900, $color: transparent);
-        @include gradient(1);
-      }
-      &:hover::after {
+      @include heart($opacity: 0, $font-weight: 900, $color: transparent);
+      @include gradient(1);
+    }
+    &:hover::after {
         opacity: 1;
         transform: translateY(-50%) scale(1.1);
       }
     }  
 
-@mixin base-button {
-  color: white;
-  font-weight: 300;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
+    @mixin base-button {
+      color: white;
+      font-weight: 300;
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
   transition: transform 200ms;
@@ -93,53 +93,54 @@ $breakpoint: 1000px;
 }
 /*ANIMATIONS KEYFRAMES*/
 @mixin quarterspin {
-    @keyframes quarterspin {
-      0% {
-        transform: rotate(-270deg);
-      }
-      100% {
-        transform: rotate(0);
-      }
+  @keyframes quarterspin {
+    0% {
+      transform: rotate(-270deg);
+    }
+    100% {
+      transform: rotate(0);
     }
   }
-  
-  @keyframes appear {
-    0% {
-      transform: translateY(50%);
-      opacity: 0;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
     }
     100% {
       transform: translateY(0);
       opacity: 1;
     }
   }
- 
+  
+  
+  
 
 
+  
+  
+  
+  /*BASE*/
 
-
-
-
-
-/*BASE*/
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
-body {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+  
+  body {
     margin: 0;
     font-family: "Roboto", sans-serif;
-}
-
-main {
-  padding: 0 7rem;
+  }
+  
+  main {
+    padding: 0rem;
   @media (max-width: 1000px) {
-    padding: 0 1rem;
+    padding: 0rem;
   }
 }  
+
 
 h1,
 h2,
@@ -185,18 +186,24 @@ header {
   }
 /*EXPLORER*/
 .explorer {
+    background-color: red;
+    height: 45vh;
     text-align: center;
-    margin: 2rem;
+    margin-top: -16px;
+    margin-bottom: 5rem;
     & h2 {
       font-size: 1.5rem;
       margin: 1rem;
+      padding-top: 35px;
     }
     & p {
       font-size: 1rem;
+      margin: 0 1rem;
     }
     & button {
         @include base-button;
         font-size: 1rem;
+        margin-top: 2rem;
       }
     }
 
@@ -239,15 +246,32 @@ header {
 
 /*TUTO*/
 .tuto {
+    background-color: #9356dc;
+    height: 66vh;
+    margin-top: -80px;
     counter-reset: steps;
     margin-bottom: 2rem;
+    margin-left: -14px;
     & ol {
     display: flex;
     gap: 2rem;
     @media (max-width: $breakpoint) {
     flex-direction: column;
+    margin-right: 15px;
     }
 }
+
+@media (min-width: 1001px) {
+    & ol {
+    padding-top: 80px;  
+    
+    & li {
+      padding: 2.5rem 2rem; 
+      margin-right: 18px;
+    } 
+  }
+}
+
     & li {
     position: relative;
     display: flex;
@@ -292,16 +316,33 @@ header {
  }
 }
 
+.h2fonction {
+    padding-top: 35px;  
+    margin-left: 32px;
+    margin-bottom: 26px;
+}
+
+@media (min-width: 1001px) {
+  .h2fonction{
+    margin-left: auto;
+    margin-right: auto;
+    width: 9rem;
+  }
+}
+
+
+
 /*MENU*/
 #homepage {
     .menus {
       background-color: #f6f6f6;
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
     
     .menus__cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+        margin: 0 1rem;
     @media (max-width: $breakpoint) {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -347,6 +388,11 @@ header {
   }
 }
 
+.h2resto{
+  margin-left: 18px;
+  margin-bottom: 18px;  
+}
+ 
 /*FOOTER*/
 footer {
     background-color: $darkgrey;
