@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+
 /*COLORS*/
 $lightgrey: #7e7e7e;
 $lightergrey: #f6f6f6;
@@ -10,9 +11,11 @@ $greyfine: #eeeded;
 $purple: #9356dc;
 $color-tertiary: #99e2d0;
 $darkgrey: #353535;
+
 /*VARIABLES*/
 $tuto-bullet-height: 1rem;
 $breakpoint: 1000px;
+
 /*MIXINS*/
 @mixin gradient($opacity: 0.9) {
     background-image: linear-gradient(
@@ -26,7 +29,7 @@ $breakpoint: 1000px;
     box-shadow: 2px 1px 8px -3px $lightgrey;
 }
 
-@mixin transform-zoom($zoom-level: 1.02, $transformation: none) {
+@mixin transform-zoom($zoom-level: 1.02, $transformation: 0) {
     transform: $transformation scale($zoom-level);
   }
 
@@ -113,16 +116,8 @@ $breakpoint: 1000px;
       opacity: 1;
     }
   }
-  
-  
-  
 
-
-  
-  
-  
   /*BASE*/
-
   *,
   ::before,
   ::after {
@@ -182,11 +177,12 @@ header {
     }
     h2 {
       font-size: 1rem;
+      font-weight: 500;
     }
   }
+
 /*EXPLORER*/
 .explorer {
-    background-color: red;
     height: 45vh;
     text-align: center;
     margin-top: -16px;
@@ -246,7 +242,7 @@ header {
 
 /*TUTO*/
 .tuto {
-    background-color: #9356dc;
+    background-color: white;
     height: 66vh;
     margin-top: -80px;
     counter-reset: steps;
@@ -281,6 +277,7 @@ header {
     padding: 1.5rem 2rem;
     flex-grow: 1;
     border-radius: 1rem;
+    font-weight: 500;
     @include box-shadow;
     
     &::before {
@@ -308,6 +305,7 @@ header {
     color: $purple;
     }
 }
+
     & i.fas {
     margin-right: 1rem;
     color: $lightgrey;
@@ -329,8 +327,6 @@ header {
     width: 9rem;
   }
 }
-
-
 
 /*MENU*/
 #homepage {
@@ -454,6 +450,7 @@ body {
       @include heart-animated;
       border-radius: 2rem 2rem 0 0;
       background-color: $lightergrey;
+      cursor: pointer;
     } 
 }
 
@@ -523,6 +520,10 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+}
+
+.descriptionMyrtilles {
+ font-weight: 500; 
 }
 
 .menu-item__check {
