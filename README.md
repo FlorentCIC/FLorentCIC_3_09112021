@@ -1,4 +1,4 @@
-# FLorentCicek_3_09112021
+# FLorentCIC_3_09112021
 
 ## Projet : Créer un site web Ohmyfood qui est une jeune startup et qui voudrait s'imposer sur le marché de la restauration.
 L'objectif est de développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques.
